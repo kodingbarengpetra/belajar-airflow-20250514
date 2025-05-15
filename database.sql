@@ -9,6 +9,13 @@ CREATE TABLE users (
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE user_history (
+    id UUID PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(id),
+    page VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
 INSERT INTO users (id, username, email) VALUES
     ('123e4567-e89b-12d3-a456-426614174000', 'user1', 'user1@example.com'),
     ('123e4567-e89b-12d3-a456-426614174001', 'user2', 'user2@example.com'),
