@@ -1,7 +1,7 @@
 import logging
 import datetime
 # pylint: disable=import-error,no-name-in-module
-from airflow.sdk import DAG
+from airflow.models.dag import DAG
 from airflow.providers.standard.operators.empty import EmptyOperator
 
 logger = logging.getLogger(__name__)
@@ -18,3 +18,6 @@ with DAG(
 
 def list_file_from_bucket():
     pass
+
+def tambah_tambah(a, b):
+    return a + b
