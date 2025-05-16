@@ -1,13 +1,10 @@
-import datetime
 import logging
-
-logger = logging.getLogger(__name__)
-
+import datetime
+# pylint: disable=import-error,no-name-in-module
 from airflow.sdk import DAG
 from airflow.providers.standard.operators.empty import EmptyOperator
 
-import boto3
-import psycopg2
+logger = logging.getLogger(__name__)
 
 with DAG(
     dag_id="dag_helloworld",
