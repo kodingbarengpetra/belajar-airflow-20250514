@@ -46,3 +46,7 @@ airflow.db
 airflow-webserver.pid
 logs/
 airflow/logs/*
+
+# Ignore coverage
+.coverage
+coverage.xml
