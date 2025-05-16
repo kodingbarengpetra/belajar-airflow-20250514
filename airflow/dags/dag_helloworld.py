@@ -6,6 +6,7 @@ from airflow.providers.standard.operators.empty import EmptyOperator
 
 logger = logging.getLogger(__name__)
 
+# pylint: disable=unexpected-keyword-arg
 with DAG(
     dag_id="dag_helloworld",
     start_date=datetime.datetime(2021, 1, 1),
